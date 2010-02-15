@@ -757,7 +757,7 @@ class MultiTreeBehavior extends ModelBehavior {
 		} else {
 			$results = $Model->find('all', array(
 				'conditions' => $conditions,
-				'order' => array($Model->escapeField($left) => 'asc'),
+				'order' => array($Model->escapeField($root) => 'asc' , $Model->escapeField($left) => 'asc'),
 				'recursive' => $recursive,
 				));
 		}
